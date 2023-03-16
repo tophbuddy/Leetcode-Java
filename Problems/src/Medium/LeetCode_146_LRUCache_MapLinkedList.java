@@ -41,7 +41,7 @@ public class LeetCode_146_LRUCache_MapLinkedList {
     private int size;
     private int capacity;
 
-    public LRUCache(int capacity) {
+    public LeetCode_146_LRUCache_MapLinkedList(int capacity) {
         this.capacity = capacity;
         this.size = 0;
         this.head = new DoublyLinkedNode();

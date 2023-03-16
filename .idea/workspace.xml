@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7426aaab-dc3a-4c26-9c9b-85053c5dc82a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/src/Medium/LeetCode_146_LRUCache_MapLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/src/Medium/LeetCode_146_LRUCache_MapLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,8 @@
       <updated>1678824724941</updated>
       <workItem from="1678824728442" duration="5250000" />
       <workItem from="1678977973962" duration="2367000" />
-      <workItem from="1678986231133" duration="51000" />
+      <workItem from="1678986231133" duration="142000" />
+      <workItem from="1678987144136" duration="1904000" />
     </task>
     <servers />
   </component>
