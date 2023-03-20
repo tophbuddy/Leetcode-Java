@@ -4,42 +4,41 @@ import java.util.*;
 
 public class LeetCode_380_InsertDeleteGetRandom_HashMap {
     class RandomizedSet {
-        Map<Integer, Integer> mapSet;
-        List<Integer> listSet;
-        Random rand = new Random();
+        Random random = new Random();
+        List<Integer> list;
+        Map<Integer, Integer> map;
 
         public RandomizedSet() {
-            mapSet = new HashMap<>();
-            listSet = new ArrayList<>();
+            list = new ArrayList<>();
+            map = new HashMap<>();
         }
 
         public boolean insert(int val) {
-            if (mapSet.containsKey(val)) {
-                return false;
+            Integer get = map.get(val);
+            if (get == null) {
+                map.put(val, list.size());
+                list.add(list.size(), val);
+                return true;
             }
-            mapSet.put(val, listSet.size());
-            listSet.add(listSet.size(), val);
-            return true;
+            return false;
         }
 
         public boolean remove(int val) {
-            if (!mapSet.containsKey(val)) {
+            Integer idx = map.get(val);
+            if (idx == null) {
                 return false;
             }
-            int valIndex = mapSet.get(val);
-            int endVal = listSet.get(listSet.size() - 1);
-            listSet.set(valIndex, endVal);
-            mapSet.put(endVal, valIndex);
-            listSet.remove(listSet.size() - 1);
-            mapSet.remove(val);
-
+            int endVal = list.get(list.size() - 1);
+            list.set(idx, endVal);
+            map.put(endVal, idx);
+            list.remove((list.size() - 1));
+            map.remove(val);
             return true;
         }
 
         public int getRandom() {
-            int max = listSet.size();
-            int r = rand.nextInt(max);
-            return listSet.get(r);
+            int i = random.nextInt(list.size());
+            return list.get(i);
         }
     }
 }
